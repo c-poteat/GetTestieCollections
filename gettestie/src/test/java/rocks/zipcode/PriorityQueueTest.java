@@ -1,10 +1,10 @@
 package rocks.zipcode;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import java.util.PriorityQueue;
 import static org.junit.Assert.assertFalse;
-
 
 public class PriorityQueueTest {
     private PriorityQueue<String> newQue;
@@ -19,6 +19,7 @@ public class PriorityQueueTest {
         newQue.add("We");
         newQue.add("Go");
     }
+
     @Test
     public void isQueEmpty() {
         //Given
@@ -28,9 +29,11 @@ public class PriorityQueueTest {
 
     @Test
     public void addQue() {
-        //Given
+        //Then
+        String first = newQue.poll();
 
         //When
+        Assert.assertEquals("Go", first);
 
     }
 }

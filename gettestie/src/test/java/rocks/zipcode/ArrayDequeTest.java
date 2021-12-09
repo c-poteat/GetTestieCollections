@@ -1,11 +1,9 @@
 package rocks.zipcode;
 
 import org.junit.Test;
-
 import java.util.ArrayDeque;
 import java.util.Deque;
-
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class ArrayDequeTest {
 
@@ -15,7 +13,7 @@ public class ArrayDequeTest {
         queue.offer("first");
         queue.offer("second");
 
-        assertEquals("second",queue.getLast());
+        assertEquals("second", queue.getLast());
     }
 
     @Test
@@ -24,7 +22,7 @@ public class ArrayDequeTest {
         queue.offer("third");
         queue.offer("fourth");
 
-        assertEquals("third",queue.getFirst());
+        assertEquals("third", queue.getFirst());
     }
 
     @Test
@@ -33,6 +31,6 @@ public class ArrayDequeTest {
         queue.offer("fifth");
         queue.offer("sixth");
 
-        assertEquals("fifth",queue.poll());
+        assertEquals("fifth", queue.poll());
     }
 }

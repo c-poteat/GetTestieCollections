@@ -1,26 +1,31 @@
 package rocks.zipcode;
 
-import javafx.scene.Node;
-import org.junit.Before;
+import org.junit.Assert;
 import org.junit.Test;
-
 import java.util.LinkedList;
 
-
 public class LinkedListTest {
-    private LinkedList newList = new LinkedList();
 
-    @Before
     @Test
-    public void setUp() {
+    public void testEmptyLinkedList() {
+        //Given
+        LinkedList<String> newLinky = new LinkedList();
 
+        //Then
+        Assert.assertTrue(newLinky.isEmpty());
+        Assert.assertEquals(0, 0);
     }
 
-    public void addItemTest() {
+    @Test
+    public void testpeekLinkedList() {
         //Given
-
+        LinkedList newLinky = new LinkedList();
+        newLinky.add(1);
+        newLinky.add("ToMany");
+        Object expected = "ToMany";
         //When
-
-
+        Object actual = newLinky.peekLast();
+        //Then
+        Assert.assertEquals(expected,actual);
     }
 }

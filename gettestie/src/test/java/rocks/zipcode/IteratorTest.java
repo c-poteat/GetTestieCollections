@@ -3,20 +3,22 @@ package rocks.zipcode;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import java.util.*;
-
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 public class IteratorTest {
     private List<Integer> newArrayList;
     private Iterator<Integer> iter;
 
     @Before
-        public void setUp() {
+    public void setUp() {
         newArrayList = new ArrayList<Integer>();
         newArrayList.add(4);
         newArrayList.add(6);
         iter = newArrayList.iterator();
     }
+
     @Test
     public void testNext() {
         //Given

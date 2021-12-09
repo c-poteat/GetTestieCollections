@@ -3,10 +3,9 @@ package rocks.zipcode;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
 import java.util.Collections;
 import java.util.HashSet;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 public class HashSetTest {
     private HashSet<Object> hashSet;
@@ -59,5 +58,4 @@ public class HashSetTest {
         //Then
         Assert.assertEquals(expected, actual);
     }
-
 }

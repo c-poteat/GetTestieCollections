@@ -6,11 +6,11 @@ import java.util.HashMap;
 import static org.junit.Assert.*;
 
 public class HashMapTest {
-    private HashMap map;
+    private HashMap<String, Integer> map;
 
     @Before
     public void setUp() {
-        this.map = new HashMap();
+        this.map = new HashMap<>();
     }
 
     @Test
@@ -37,13 +37,6 @@ public class HashMapTest {
         map.put("Goodbye", 6);
         assertEquals(2, map.size());
     }
-    @Test
-    public void testReplacesValueWithSameKey() {
-        map.put("Hello", 5);
-        map.put("World", 6);
-
-        assertEquals(5, map.get("Hello"));
-    }
 
     @Test
     public void testRemoveDecrementSize() {
@@ -55,6 +48,5 @@ public class HashMapTest {
 
         map.remove("World");
         assertEquals(0, map.size());
-
     }
 }
