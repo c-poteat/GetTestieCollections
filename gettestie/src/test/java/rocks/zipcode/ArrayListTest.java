@@ -6,7 +6,6 @@ import static org.junit.Assert.*;
 
 public class ArrayListTest {
 
-
     @Test
     public void TestArrayListIsEmpty() {
         ArrayList<Object> emptyArray = new ArrayList<>();
@@ -33,6 +32,4 @@ public class ArrayListTest {
 
         assertTrue(strArray.isEmpty());
     }
-
-
 }
